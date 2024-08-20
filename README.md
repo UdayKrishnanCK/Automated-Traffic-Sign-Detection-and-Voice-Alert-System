@@ -13,7 +13,7 @@ Upon detection and classification of a traffic sign, the system triggers a voice
 
 - **`models/`**: This directory contains the trained models used in the project.
   - **`best.pt`**: The YOLO model trained specifically for detecting traffic signs in video frames. This model scans each frame and identifies regions that likely contain traffic signs.
-  - **`best model.keras`**: The CNN model trained on the GTSRB (German Traffic Sign Recognition Benchmark) dataset. Once a sign is detected by the YOLO model, this CNN model classifies it into one of the 43 predefined traffic sign categories.
+  - **`best_model_new.keras`**: The CNN model trained on the GTSRB (German Traffic Sign Recognition Benchmark) dataset. Once a sign is detected by the YOLO model, this CNN model classifies it into one of the 43 predefined traffic sign categories.
 
 - **`notebooks/`**: This directory contains the Jupyter notebook that includes the full codebase.
   - **`Automated Traffic Sign Detection and Voice Alert System1.ipynb`**: The notebook where all the code is implemented, including model loading, video capture, traffic sign detection, classification, and voice alert generation.
@@ -39,7 +39,7 @@ Ensure you have Python 3.7+ installed on your system. You will also need `pip`, 
 
 1. **Clone the Repository**:
    - Clone this repository to your local machine using the following command:
-     ```bash
+     ```
      git clone https://github.com/your-username/Traffic-Sign-Detection.git
      cd Traffic-Sign-Detection
      ```
@@ -83,7 +83,8 @@ Ensure you have Python 3.7+ installed on your system. You will also need `pip`, 
 
 ### Example Use Cases
 
-- **Driver Assistance**: Enhance driver awareness by automatically identifying traffic signs and providing timely voice alerts.
+- **Car Dashboard Camera**: Integrate the traffic sign detection system with a car's dashboard camera to enhance driver safety. The system can continuously monitor the road ahead, detect traffic signs, and provide real-time voice alerts to the driver, helping them stay informed about important road signs without needing to take their eyes off the road
+- **Educational Tools**: Employ the system in educational settings to demonstrate and teach about traffic signs and their importance, using real-time detection and alerts for interactive learning
 - **Research and Development**: Use this project as a foundation for developing more advanced traffic sign recognition systems or integrating additional features such as speed limit enforcement.
 
 ## Dataset
@@ -98,24 +99,12 @@ The dataset is organized into subfolders within the `data/Dataset/` directory, w
   - **Purpose**: Detects traffic signs in real-time video frames.
   - **Training**: Trained on a custom dataset containing traffic signs. The model was fine-tuned to optimize detection accuracy, particularly for smaller and more complex signs.
 
-- **CNN Model (`best model.keras`)**:
+- **CNN Model (`best_model_new.keras`)**:
   - **Purpose**: Classifies the detected traffic signs into one of 43 categories.
-  - **Training**: Trained on the GTSRB dataset, achieving high accuracy. The model was saved in the `.keras` format, which is compatible with TensorFlow and Keras for easy deployment.
+  - **Training**: Trained on the GTSRB dataset, achieving high accuracy of 99.47%. The model was saved in the `.keras` format, which is compatible with TensorFlow and Keras for easy deployment.
 
 ## Acknowledgements
 
 - **GTSRB Dataset**: The German Traffic Sign Recognition Benchmark was instrumental in training the CNN model. 
 - **YOLO Framework**: The YOLO architecture provided an efficient way to detect objects in real-time with minimal computational overhead.
 - **OpenCV and TensorFlow**: These libraries were critical for video processing and model deployment.
-
-## License
-
-This project is licensed under the MIT License. You are free to use, modify, and distribute this project as long as you include proper attribution. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-If you have any questions or feedback, feel free to reach out via GitHub or through the contact information provided in the repository.
-
----
-
-This README is comprehensive and provides all the necessary details to understand, set up, and run the project. It also includes sections for licensing, acknowledgments, and contact, making it suitable for sharing your work with the community. Let me know if you need any further adjustments!
