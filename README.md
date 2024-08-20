@@ -1,1 +1,121 @@
 # Automated-Traffic-Sign-Detection-and-Voice-Alert-System
+
+## Overview
+
+This project is an automated system for detecting traffic signs from real-time video feeds captured by a webcam. The system leverages two machine learning models: 
+
+1. **YOLO (You Only Look Once) model** for detecting traffic signs in video frames.
+2. **CNN (Convolutional Neural Network) model** for classifying the detected traffic signs into one of 43 categories.
+
+Upon detection and classification of a traffic sign, the system triggers a voice alert corresponding to the identified sign, enhancing driving safety and awareness.
+
+## Project Structure
+
+- **`models/`**: This directory contains the trained models used in the project.
+  - **`best.pt`**: The YOLO model trained specifically for detecting traffic signs in video frames. This model scans each frame and identifies regions that likely contain traffic signs.
+  - **`best model.keras`**: The CNN model trained on the GTSRB (German Traffic Sign Recognition Benchmark) dataset. Once a sign is detected by the YOLO model, this CNN model classifies it into one of the 43 predefined traffic sign categories.
+
+- **`notebooks/`**: This directory contains the Jupyter notebook that includes the full codebase.
+  - **`Automated Traffic Sign Detection and Voice Alert System1.ipynb`**: The notebook where all the code is implemented, including model loading, video capture, traffic sign detection, classification, and voice alert generation.
+
+- **`data/`**: This directory holds the dataset and associated files.
+  - **`Dataset/`**: Contains subfolders for each of the 43 traffic sign classes. Each subfolder contains images belonging to that class, used for training the CNN model.
+  - **`data.npy`**: A numpy array storing the input data, typically preprocessed images, which were used for training the models.
+  - **`target.npy`**: A numpy array storing the target labels corresponding to the input data, used for supervised learning in model training.
+
+- **`.gitignore`**: A file specifying which files and directories to ignore when committing to the repository. This typically includes temporary files, logs, and model weights that can be regenerated.
+
+- **`README.md`**: The project documentation file you are currently reading. It provides a comprehensive overview of the project, its structure, and how to use it.
+
+- **`requirements.txt`**: This file lists all the Python packages and dependencies required to run the project. It ensures that anyone cloning the repository can set up the project environment correctly.
+
+## Installation
+
+### Prerequisites
+
+Ensure you have Python 3.7+ installed on your system. You will also need `pip`, the Python package manager, to install the required libraries.
+
+### Steps
+
+1. **Clone the Repository**:
+   - Clone this repository to your local machine using the following command:
+     ```bash
+     git clone https://github.com/your-username/Traffic-Sign-Detection.git
+     cd Traffic-Sign-Detection
+     ```
+
+2. **Install Dependencies**:
+   - Install the necessary Python packages using `pip`:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+   The `requirements.txt` file includes essential libraries such as TensorFlow, OpenCV, numpy, and others required for running the models and processing the video feed.
+
+## Usage
+
+### Running the System
+
+1. **Open the Jupyter Notebook**:
+   - Launch Jupyter Notebook and open `Automated Traffic Sign Detection and Voice Alert System1.ipynb` located in the `notebooks/` directory.
+
+2. **Execute the Notebook**:
+   - Follow the cells sequentially to:
+     - Load the pre-trained YOLO and CNN models.
+     - Capture video from your webcam.
+     - Process the video frames to detect traffic signs.
+     - Classify the detected signs and trigger voice alerts.
+   - Ensure your webcam is connected and accessible by your system.
+
+### System Workflow
+
+1. **Video Capture**:
+   - The system captures live video frames from the webcam.
+
+2. **Traffic Sign Detection**:
+   - The YOLO model processes each frame to detect regions that likely contain traffic signs.
+
+3. **Traffic Sign Classification**:
+   - Detected regions are passed to the CNN model, which classifies them into one of the 43 traffic sign classes.
+
+4. **Voice Alert**:
+   - Once a sign is classified, the system generates a voice alert corresponding to the detected traffic sign.
+
+### Example Use Cases
+
+- **Driver Assistance**: Enhance driver awareness by automatically identifying traffic signs and providing timely voice alerts.
+- **Research and Development**: Use this project as a foundation for developing more advanced traffic sign recognition systems or integrating additional features such as speed limit enforcement.
+
+## Dataset
+
+The dataset used for training the CNN model is based on the **German Traffic Sign Recognition Benchmark (GTSRB)**, which contains images of 43 different traffic sign classes. Each class represents a unique type of traffic sign, such as speed limits, no entry, stop signs, etc.
+
+The dataset is organized into subfolders within the `data/Dataset/` directory, with each subfolder named after its respective class and containing the relevant images.
+
+## Models
+
+- **YOLO Model (`best.pt`)**:
+  - **Purpose**: Detects traffic signs in real-time video frames.
+  - **Training**: Trained on a custom dataset containing traffic signs. The model was fine-tuned to optimize detection accuracy, particularly for smaller and more complex signs.
+
+- **CNN Model (`best model.keras`)**:
+  - **Purpose**: Classifies the detected traffic signs into one of 43 categories.
+  - **Training**: Trained on the GTSRB dataset, achieving high accuracy. The model was saved in the `.keras` format, which is compatible with TensorFlow and Keras for easy deployment.
+
+## Acknowledgements
+
+- **GTSRB Dataset**: The German Traffic Sign Recognition Benchmark was instrumental in training the CNN model. 
+- **YOLO Framework**: The YOLO architecture provided an efficient way to detect objects in real-time with minimal computational overhead.
+- **OpenCV and TensorFlow**: These libraries were critical for video processing and model deployment.
+
+## License
+
+This project is licensed under the MIT License. You are free to use, modify, and distribute this project as long as you include proper attribution. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out via GitHub or through the contact information provided in the repository.
+
+---
+
+This README is comprehensive and provides all the necessary details to understand, set up, and run the project. It also includes sections for licensing, acknowledgments, and contact, making it suitable for sharing your work with the community. Let me know if you need any further adjustments!
