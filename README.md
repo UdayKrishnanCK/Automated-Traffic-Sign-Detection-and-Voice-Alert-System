@@ -40,7 +40,7 @@ Ensure you have Python 3.7+ installed on your system. You will also need `pip`, 
 1. **Clone the Repository**:
    - Clone this repository to your local machine using the following command:
      ```
-     git clone https://github.com/your-username/Traffic-Sign-Detection.git
+     git clone https://github.com/UdayKrishnanCK/Automated-Traffic-Sign-Detection-and-Voice-Alert-System.git
      cd Traffic-Sign-Detection
      ```
 
