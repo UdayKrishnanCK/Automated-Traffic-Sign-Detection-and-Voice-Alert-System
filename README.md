@@ -40,8 +40,6 @@ Upon detection and classification of a traffic sign, the system triggers a voice
 
 - **`README.md`**: The project documentation file you are currently reading. It provides a comprehensive overview of the project, its structure, and how to use it.
 
-- **`requirements.txt`**: This file lists all the Python packages and dependencies required to run the project. It ensures that anyone cloning the repository can set up the project environment correctly.
-
 ## Installation
 
 ### Prerequisites
