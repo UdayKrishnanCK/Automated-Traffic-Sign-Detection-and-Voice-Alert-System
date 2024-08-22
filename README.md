@@ -14,7 +14,7 @@ Upon detection and classification of a traffic sign, the system triggers a voice
 - **`models/`**: This directory contains the trained models used in the project.
   - **`best.pt`**: The YOLO model trained specifically for detecting traffic signs in video frames. This model scans each frame and identifies regions that likely contain traffic signs.
   - **`best_model_new.keras`**: The CNN model trained on the GTSRB (German Traffic Sign Recognition Benchmark) dataset. Once a sign is detected by the YOLO model, this CNN model classifies it into one of the 43 
-    predefined traffic sign categories.                                                                                                                                                                        Note: Due to the large size of this file, it cannot be uploaded directly to GitHub. Instead, you can download it from the following Google Drive link:
+    predefined traffic sign categories.                                                                                                                                                                        *Note: Due to the large size of this file, it cannot be uploaded directly to GitHub. Instead, you can download it from the following Google Drive link:*
     [https://drive.google.com/file/d/1Hd95K9b97MoocIFfzg454uiN3-9eh90i/view?usp=sharing]
 
 - **`notebooks/`**: This directory contains the Jupyter notebook that includes the full codebase.
