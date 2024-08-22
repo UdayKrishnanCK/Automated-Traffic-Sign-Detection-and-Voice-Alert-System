@@ -26,12 +26,14 @@ Upon detection and classification of a traffic sign, the system triggers a voice
 - **`data/`**: This directory holds the dataset and associated files.
   - **`Dataset/`**: Contains subfolders for each of the 43 traffic sign classes. Each subfolder contains images belonging to that class, used for training the CNN model.
 
-  *Note: The dataset is large, so it has been uploaded to Google Drive instead of GitHub. You can download it from the following link:*
-  [https://drive.google.com/drive/folders/1bcP1BHyo-dIH5_VAhOncbk8AaSgS3RBH?usp=sharing]
+
+    *Note: The dataset is large, so it has been uploaded to Google Drive instead of GitHub. You can download it from the following link:*
+    [https://drive.google.com/drive/folders/1bcP1BHyo-dIH5_VAhOncbk8AaSgS3RBH?usp=sharing]
   - **`data.npy`**: A numpy array storing the input data, typically preprocessed images, which were used for training the models.
  
-  *Note: This file is also too large to be uploaded to GitHub and is available for download via Google Drive:*
-  [https://drive.google.com/file/d/1nRlQy9Xy4B3ETLCQ77b56EIrLdlpzdzM/view?usp=sharing]
+
+      *Note: This file is also too large to be uploaded to GitHub and is available for download via Google Drive:*
+     [https://drive.google.com/file/d/1nRlQy9Xy4B3ETLCQ77b56EIrLdlpzdzM/view?usp=sharing]
   - **`target.npy`**: A numpy array storing the target labels corresponding to the input data, used for supervised learning in model training.
 
 - **`.gitignore`**: A file specifying which files and directories to ignore when committing to the repository. This typically includes temporary files, logs, and model weights that can be regenerated.
